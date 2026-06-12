@@ -1,0 +1,12 @@
+@import "@heroui/styles";
+@source "../node_modules/@heroui/react/dist";
+
+html,
+body {
+  overscroll-behavior-y: none;
+  background: var(--background);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
