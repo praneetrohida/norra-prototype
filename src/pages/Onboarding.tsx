@@ -58,7 +58,7 @@ export function OnboardingPage() {
         <FormField
           isRequired
           label="Business name"
-          placeholder="e.g. Sri Venkateshwara Traders"
+          placeholder="e.g. Mehta Garments & Apparel"
           value={name}
           onChange={setName}
         />

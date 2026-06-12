@@ -11,8 +11,8 @@ import type { CatalogItem } from "../types";
 function ItemRow({ item }: { item: CatalogItem }) {
   return (
     <Link to={`/catalog/${item.id}/edit`}>
-      <Card className="w-full">
-        <Card.Content className="flex items-center gap-3 py-3">
+      <Card className="w-full rounded-2xl p-0">
+        <Card.Content className="flex-row items-center gap-3 px-4 py-3">
           <span className="min-w-0 flex-1">
             <span className="flex items-center gap-2">
               <span className="truncate font-medium text-foreground">
@@ -181,7 +181,7 @@ export function CatalogFormPage() {
         <FormField
           isRequired
           label="Name"
-          placeholder="e.g. Basmati Rice"
+          placeholder="e.g. Cotton T-Shirt"
           value={name}
           onChange={setName}
         />

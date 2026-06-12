@@ -44,15 +44,15 @@ function seedState(email: string): AppState {
   const customers: Customer[] = [
     {
       id: "c1",
-      name: "Ramesh Kumar",
+      name: "Rohan Mehta",
       phone: "+91 98765 43210",
-      address: "12, Gandhi Bazaar Main Road,\nBasavanagudi, Bengaluru",
+      address: "12, Commercial Street,\nShivajinagar, Bengaluru",
       notes: "Prefers delivery before noon.",
       createdAt: daysAgo(40),
     },
     {
       id: "c2",
-      name: "Sunita General Store",
+      name: "Trends Boutique",
       phone: "+91 91234 56780",
       address: "Shop 4, Market Complex,\nJayanagar 4th Block",
       notes: "",
@@ -68,27 +68,27 @@ function seedState(email: string): AppState {
     },
     {
       id: "c4",
-      name: "Lakshmi Caterers",
+      name: "StyleHub Retail",
       phone: "+91 90080 12345",
-      address: "45, Temple Street,\nMalleshwaram",
-      notes: "Bulk orders around festival season.",
+      address: "45, Brigade Road,\nAshok Nagar",
+      notes: "Bulk orders around wedding and festival season.",
       createdAt: daysAgo(10),
     },
   ];
 
   const catalog: CatalogItem[] = [
-    { id: "i1", name: "Basmati Rice", unit: "kg", defaultPrice: 95 },
-    { id: "i2", name: "Toor Dal", unit: "kg", defaultPrice: 160 },
-    { id: "i3", name: "Sunflower Oil", unit: "litre", defaultPrice: 142 },
-    { id: "i4", name: "Wheat Flour (Atta)", unit: "kg", defaultPrice: 46 },
-    { id: "i5", name: "Sugar", unit: "kg", defaultPrice: 44 },
-    { id: "i6", name: "Tea Powder", unit: "pack", defaultPrice: 85 },
-    { id: "i7", name: "Jaggery", unit: "kg", defaultPrice: 60 },
+    { id: "i1", name: "Cotton T-Shirt (Crew Neck)", unit: "piece", defaultPrice: 249 },
+    { id: "i2", name: "Slim Fit Denim Jeans", unit: "piece", defaultPrice: 899 },
+    { id: "i3", name: "Formal Shirt (Full Sleeve)", unit: "piece", defaultPrice: 649 },
+    { id: "i4", name: "Polo T-Shirt", unit: "piece", defaultPrice: 399 },
+    { id: "i5", name: "Cotton Socks", unit: "pair", defaultPrice: 49 },
+    { id: "i6", name: "Hooded Sweatshirt", unit: "piece", defaultPrice: 799 },
+    { id: "i7", name: "Track Pants", unit: "piece", defaultPrice: 449 },
     {
       id: "i8",
-      name: "Groundnut Oil (old stock)",
-      unit: "litre",
-      defaultPrice: 180,
+      name: "Denim Jacket (old stock)",
+      unit: "piece",
+      defaultPrice: 1450,
       archivedAt: daysAgo(5),
     },
   ];
@@ -111,8 +111,8 @@ function seedState(email: string): AppState {
       createdAt: daysAgo(6, 9),
       completedAt: daysAgo(5, 17),
       lines: [
-        { id: uid(), itemName: "Basmati Rice", catalogItemId: "i1", qty: 25, unit: "kg", unitPrice: 95, fulfilledAt: daysAgo(5, 16) },
-        { id: uid(), itemName: "Sugar", catalogItemId: "i5", qty: 10, unit: "kg", unitPrice: 44, fulfilledAt: daysAgo(5, 17) },
+        { id: uid(), itemName: "Cotton T-Shirt (Crew Neck)", catalogItemId: "i1", qty: 25, unit: "piece", unitPrice: 249, fulfilledAt: daysAgo(5, 16) },
+        { id: uid(), itemName: "Cotton Socks", catalogItemId: "i5", qty: 40, unit: "pair", unitPrice: 49, fulfilledAt: daysAgo(5, 17) },
       ],
     },
     {
@@ -126,8 +126,8 @@ function seedState(email: string): AppState {
       createdAt: daysAgo(3, 11),
       completedAt: daysAgo(2, 12),
       lines: [
-        { id: uid(), itemName: "Tea Powder", catalogItemId: "i6", qty: 6, unit: "pack", fulfilledAt: daysAgo(2, 12) },
-        { id: uid(), itemName: "Steel Scrubber", qty: 12, unit: "piece", fulfilledAt: daysAgo(2, 12) },
+        { id: uid(), itemName: "Polo T-Shirt", catalogItemId: "i4", qty: 6, unit: "piece", fulfilledAt: daysAgo(2, 12) },
+        { id: uid(), itemName: "Canvas Belt", qty: 12, unit: "piece", fulfilledAt: daysAgo(2, 12) },
       ],
     },
     {
@@ -140,9 +140,9 @@ function seedState(email: string): AppState {
       notes: "Deliver before 6pm.",
       createdAt: daysAgo(1, 10),
       lines: [
-        { id: uid(), itemName: "Sunflower Oil", catalogItemId: "i3", qty: 12, unit: "litre", unitPrice: 142, fulfilledAt: daysAgo(0, 9) },
-        { id: uid(), itemName: "Toor Dal", catalogItemId: "i2", qty: 5, unit: "kg", unitPrice: 160 },
-        { id: uid(), itemName: "Wheat Flour (Atta)", catalogItemId: "i4", qty: 20, unit: "kg", unitPrice: 46 },
+        { id: uid(), itemName: "Formal Shirt (Full Sleeve)", catalogItemId: "i3", qty: 12, unit: "piece", unitPrice: 649, fulfilledAt: daysAgo(0, 9) },
+        { id: uid(), itemName: "Slim Fit Denim Jeans", catalogItemId: "i2", qty: 5, unit: "piece", unitPrice: 899 },
+        { id: uid(), itemName: "Hooded Sweatshirt", catalogItemId: "i6", qty: 20, unit: "piece", unitPrice: 799 },
       ],
     },
     {
@@ -155,9 +155,9 @@ function seedState(email: string): AppState {
       notes: "",
       createdAt: daysAgo(0, 9),
       lines: [
-        { id: uid(), itemName: "Basmati Rice", catalogItemId: "i1", qty: 50, unit: "kg" },
-        { id: uid(), itemName: "Jaggery", catalogItemId: "i7", qty: 8.5, unit: "kg" },
-        { id: uid(), itemName: "Banana Leaves", qty: 100, unit: "piece" },
+        { id: uid(), itemName: "Cotton T-Shirt (Crew Neck)", catalogItemId: "i1", qty: 50, unit: "piece" },
+        { id: uid(), itemName: "Track Pants", catalogItemId: "i7", qty: 8, unit: "piece" },
+        { id: uid(), itemName: "Garment Covers", qty: 100, unit: "piece" },
       ],
     },
     {
@@ -170,8 +170,8 @@ function seedState(email: string): AppState {
       notes: "",
       createdAt: daysAgo(0, 11),
       lines: [
-        { id: uid(), itemName: "Toor Dal", catalogItemId: "i2", qty: 2, unit: "kg", unitPrice: 160 },
-        { id: uid(), itemName: "Sugar", catalogItemId: "i5", qty: 5, unit: "kg", unitPrice: 44 },
+        { id: uid(), itemName: "Slim Fit Denim Jeans", catalogItemId: "i2", qty: 2, unit: "piece", unitPrice: 899 },
+        { id: uid(), itemName: "Cotton Socks", catalogItemId: "i5", qty: 5, unit: "pair", unitPrice: 49 },
       ],
     },
   ];

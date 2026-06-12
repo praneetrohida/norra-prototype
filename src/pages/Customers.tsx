@@ -76,8 +76,8 @@ export function CustomersPage() {
           <div className="flex flex-col gap-3">
             {customers.map((c) => (
               <Link key={c.id} to={`/customers/${c.id}`}>
-                <Card className="w-full">
-                  <Card.Content className="flex items-center gap-3 py-3">
+                <Card className="w-full rounded-2xl p-0">
+                  <Card.Content className="flex-row items-center gap-3 px-4 py-3">
                     <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-secondary">
                       <UserRound aria-hidden className="size-5 text-muted" />
                     </span>
